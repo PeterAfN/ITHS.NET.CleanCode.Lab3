@@ -4,7 +4,7 @@ using System;
 namespace HouseFB.Tests
 {
     [TestFixture]
-    public class HouseTests
+    public class HouseFBTests
     {
         private House.HouseBuilder _house = new();   
 

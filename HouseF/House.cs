@@ -1,27 +1,48 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 
 namespace HouseF
 {
     public class House
     {
-        public int NoOfRooms { get; set; } = 1;
-
-        public int NoOfWindows { get; set; } = 0;
-
-        /// <summary>This field includes the street name and the street number</summary>
         public string StreetAdress { get; set; }
-
         public bool HasSwimmingPool { get; set; }
-
-        public int ParkingSpotsInGarage { get; set; }
-
         public bool HasGarage => ParkingSpotsInGarage > 0;
 
-        public House() { }
+        private int _noOfRooms;
+        public int NoOfRooms
+        {
+            get { return _noOfRooms; }
+            set 
+            {
+                if (value < 1) throw new ArgumentOutOfRangeException(("Can't create a house with less than 1 room!"));
+                _noOfRooms = value; 
+            }
+        }
+
+        private int _noOfWindows;
+        public int NoOfWindows
+        {
+            get { return _noOfWindows; }
+            set 
+            {
+                if (value < 0) throw new ArgumentOutOfRangeException(("Can't create a house with a negative number of windows!"));
+                _noOfWindows = value; 
+            }
+        }
+
+        private int _parkingSpotsInGarage;
+        public int ParkingSpotsInGarage
+        {
+            get { return _parkingSpotsInGarage; }
+            set 
+            {
+                if (value < 0) throw new ArgumentOutOfRangeException(("Can't create a house with a negative number of parking spots in garage!"));
+                _parkingSpotsInGarage = value; 
+            }
+        }
+
+
+        public House() { NoOfRooms = 1; NoOfWindows = 0; }
 
         public House(int noOfRooms, int noOfWindows, string streeAdress, bool hasSwimmingPool, int parkingSpotsInGarage)
         {
