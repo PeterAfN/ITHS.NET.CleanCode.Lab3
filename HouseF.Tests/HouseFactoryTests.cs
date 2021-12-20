@@ -133,7 +133,7 @@ namespace HouseF.Tests
             [Test]
             public void SetNumberOfParkingSpotsInGarage_GivenNoParkingSpotsAndNoSwimmingPool_ReturnCorrectString()
             {
-                _house = new House(1, 1, string.Empty, true, 0);
+                _house = new House(1, 1, string.Empty, false, 0);
                 var calculatedResult = _house.ToString();
                 StringAssert.DoesNotContain("It has a garage with place for 0 cars", calculatedResult);
             }
