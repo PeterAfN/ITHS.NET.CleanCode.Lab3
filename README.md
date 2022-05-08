@@ -1,17 +1,20 @@
-# Labb 3
+# ITHS.NET.Webbutveckling.Lab3
+ 
+Denna lab ingick i kursen "Clean code och testbar kod 30p" pÃ¥ IT-HÃ¶gskolan i GÃ¶teborg som jag lÃ¤ste vÃ¥ren Ã¥r 2022.
 
+## Uppgiftsbeskrivningen fÃ¶r labb 3:
 Hejsan allihopa!
-Hjärtligt välkomna till den tredje och sista labben. Den kommer också att fungera som 
-inlämningsuppgift för er som vill ha VG.
+HjÃ¤rtligt vÃ¤lkomna till den tredje och sista labben. Den kommer ocksÃ¥ att fungera som 
+inlÃ¤mningsuppgift fÃ¶r er som vill ha VG.
 
-## Vad ska vi göra?
+## Vad ska vi gÃ¶ra?
 
-Vi ska sätta tänderna i Dans favorit-patterns. Det är som ni kanske kommer ihåg är två bygg-patterns
+Vi ska sÃ¤tta tÃ¤nderna i Dans favorit-patterns. Det Ã¤r som ni kanske kommer ihÃ¥g Ã¤r tvÃ¥ bygg-patterns
 
 - FluentBuilder, samt
 - Factory
 
-Vi ska bygga en fabrik ELLER en fluentbuilder för att skapa följande objekt:
+Vi ska bygga en fabrik ELLER en fluentbuilder fÃ¶r att skapa fÃ¶ljande objekt:
 
 ```
         public int NoOfRooms { get; set; } = 1;
@@ -23,53 +26,53 @@ Vi ska bygga en fabrik ELLER en fluentbuilder för att skapa följande objekt:
         public bool HasGarage => ParkingSpotsInGarage > 0;
 ```
 
-Denna klass hittar ni i House.cs. Den innehåller lite mer roligt, som konstruktorer samt en ToString().
+Denna klass hittar ni i House.cs. Den innehÃ¥ller lite mer roligt, som konstruktorer samt en ToString().
 
-Vi har vissa krav på det färdiga huset:
+Vi har vissa krav pÃ¥ det fÃ¤rdiga huset:
 
-- Vi måste ha minst ett rum.
-- Vi får inte ha negativt antal fönster.
-- Vi får inte ha negativt antal parkeringsplatser.
+- Vi mÃ¥ste ha minst ett rum.
+- Vi fÃ¥r inte ha negativt antal fÃ¶nster.
+- Vi fÃ¥r inte ha negativt antal parkeringsplatser.
 
 ### FluentBuildern
 
-Var ska vi lägga logiken för att verifiera att kraven ovan är uppfyllda?
+Var ska vi lÃ¤gga logiken fÃ¶r att verifiera att kraven ovan Ã¤r uppfyllda?
 
-Man skulle kunna lägga den i antingen Set-metoderna (t.ex. SetNumberOfRooms) eller kanske ännu 
-bättre i Build()-metoden. Vi lägger alltså in logik här för att stämma av att 
-kraven är uppfyllda. Om de inte är uppfyllda kastar vi ett undantag. Då bromsar vi redan
-på detta stadiet att vi går vidare i koden med objekt som inte är korrekt uppbyggt.
+Man skulle kunna lÃ¤gga den i antingen Set-metoderna (t.ex. SetNumberOfRooms) eller kanske Ã¤nnu 
+bÃ¤ttre i Build()-metoden. Vi lÃ¤gger alltsÃ¥ in logik hÃ¤r fÃ¶r att stÃ¤mma av att 
+kraven Ã¤r uppfyllda. Om de inte Ã¤r uppfyllda kastar vi ett undantag. DÃ¥ bromsar vi redan
+pÃ¥ detta stadiet att vi gÃ¥r vidare i koden med objekt som inte Ã¤r korrekt uppbyggt.
 
 ### Fabriken
 
-Fabriken fungerar ju lite annorlunda än FluentBuildern.
+Fabriken fungerar ju lite annorlunda Ã¤n FluentBuildern.
 
-Ni får här definiera upp minst tre olika typer av hus. 
-Köper man hus via fabriken får man ta vad fabriken erbjuder :)
+Ni fÃ¥r hÃ¤r definiera upp minst tre olika typer av hus. 
+KÃ¶per man hus via fabriken fÃ¥r man ta vad fabriken erbjuder :)
 
-## Vad krävs för G?
+## Vad krÃ¤vs fÃ¶r G?
 
-För G krävs att ni implementerar minst en av de två bygg-patterna nämnda ovan.
+FÃ¶r G krÃ¤vs att ni implementerar minst en av de tvÃ¥ bygg-patterna nÃ¤mnda ovan.
 
-## Vad krävs för VG?
+## Vad krÃ¤vs fÃ¶r VG?
 
-Då vill jag ha BÄGGE patterns implementerade. Dessutom vill jag att det ska testas av. Det 
-handlar om en omfattade testning där i alla de flesta fallen ska testas av och verifieras.
+DÃ¥ vill jag ha BÃ„GGE patterns implementerade. Dessutom vill jag att det ska testas av. Det 
+handlar om en omfattade testning dÃ¤r i alla de flesta fallen ska testas av och verifieras.
 
 ## Mapp-struktur
 
-Jag tog mig friheten att skapa upp en mappstruktur för projektet.
+Jag tog mig friheten att skapa upp en mappstruktur fÃ¶r projektet.
 
-- ITHS-CC-Labb3 innehåller i stort sett bara orginalet på House.cs.
-- HouseF ska innehålla en eventuell fabrik och dess kod.
-- HouseF.Tests ska innehålla eventuella tests för fabriken.
-- HouseFB ska innehålla en eventuell FluentBuilders kod.
-- HouseFB.Tests ska innehålla testen för FluentBuildern.
+- ITHS-CC-Labb3 innehÃ¥ller i stort sett bara orginalet pÃ¥ House.cs.
+- HouseF ska innehÃ¥lla en eventuell fabrik och dess kod.
+- HouseF.Tests ska innehÃ¥lla eventuella tests fÃ¶r fabriken.
+- HouseFB ska innehÃ¥lla en eventuell FluentBuilders kod.
+- HouseFB.Tests ska innehÃ¥lla testen fÃ¶r FluentBuildern.
 
 ## Hur ska det redovisas?
 
-Lite annorlunda här. Eftersom denna uppgiften blir lite större så vill jag ha en länk till 
-ett repo på GitHub. Glöm då inte att bjuda in mig till repot om ni har det privat. Skicka sen 
-ett mess på teams med länken.
+Lite annorlunda hÃ¤r. Eftersom denna uppgiften blir lite stÃ¶rre sÃ¥ vill jag ha en lÃ¤nk till 
+ett repo pÃ¥ GitHub. GlÃ¶m dÃ¥ inte att bjuda in mig till repot om ni har det privat. Skicka sen 
+ett mess pÃ¥ teams med lÃ¤nken.
 
-Lägg gärna till en README.md eller README.txt om ni har något ni vill förmedla.
+LÃ¤gg gÃ¤rna till en README.md eller README.txt om ni har nÃ¥got ni vill fÃ¶rmedla.
