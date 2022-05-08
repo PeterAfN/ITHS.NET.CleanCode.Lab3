@@ -1,6 +1,6 @@
 # ITHS.NET.CleanCode.Lab3
  
-Denna lab ingick i kursen "Clean code och testbar kod 30p" på IT-Högskolan i Göteborg som jag läste våren år 2022.
+Denna lab ingick i kursen "Clean code och testbar kod 30p" på IT-Högskolan i Göteborg som jag läste våren år 2021.
 
 ## Uppgiftsbeskrivningen för labb 3:
 Hejsan allihopa!
